@@ -1,5 +1,5 @@
 # What?
-PS sharing community for SEED's members. 
+Develop a PS sharing community for SEED's members. 
 
 ## Why?
 Seed is a Group in Koreatech univ, studying Problem Solving.
