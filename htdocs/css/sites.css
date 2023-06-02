@@ -2,26 +2,42 @@
     width:1000px;
     height:700px;
     margin : 20px auto;
-    border:1px solid #000;
+    border-bottom:solid 2px #516e7f;
     box-sizing: border-box;
 }
 #sites h3{
     margin-top : 10px;
+    width : 1000px;
     text-align: center;
     font-size : 50px;
+    border-bottom: solid 2px #516e7f;
 }
 #sites h4{
     text-align: center;
     margin : 5px;
 }
+.site h4 a{
+    color : #ffffff;
+}
+.site h4 a:hover{
+    color : yellow;
+}
 .site{
     width:800px;
-    height:150px;
+    padding:20px;
     margin: 30px auto;
-    border : 1px solid #000;
     box-sizing: border-box;
+    background-color: #000;
 }
 .site p{
+    color:#cccccc;
     font-size:30px;
     text-align: center;
+}
+.site p a{
+    color:lightgreen;
+}
+.site p a:hover{
+    text-decoration: underline;
+    text-underline-position: under;
 }

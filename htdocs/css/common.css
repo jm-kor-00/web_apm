@@ -31,6 +31,7 @@ button{
 }
 button:hover{
     border:2.5px solid rgb(218, 58, 0);
+    margin:-2.5px; 
 }
 /* 상단 헤더 */
 #top { position: relative; width: 1000px; height: 90px; margin: 0 auto; }

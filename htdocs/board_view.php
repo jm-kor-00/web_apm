@@ -11,12 +11,12 @@
 	<link rel="stylesheet" type="text/css" href="./css/board.css">
 	<script>
 		function check_input() {
-			if (!document.replyForm.ID.value) {
+			if (!document.replyForm.id.value) {
 				alert("아이디를 입력하세요!");
 				document.replyForm.ID.focus();
 				return;
 			}
-			if (!document.replyForm.PW.value) {
+			if (!document.replyForm.pw.value) {
 				alert("비밀번호를 입력하세요!");
 				document.replyForm.PW.focus();
 				return;
@@ -51,7 +51,7 @@
 				$con = mysqli_connect("localhost", "user1", "12345", "sample");
 				$sql = "select * from board where num=$num";
 				$result = mysqli_query($con, $sql);
-
+			
 				$row = mysqli_fetch_array($result);
 				$id = $row["id"];
 				$name = $row["name"];
@@ -140,11 +140,11 @@
 						</span>
 						<div class="blank"></div>
 
-					<?php } ?>
+					<?php }$page = $_GET["page"]; ?>
 					<li>
-						<form method="POST" id="replyForm" name="replyForm" action="reply_input.php">
-							<span class="newAC">ID&nbsp;</span><input name="ID" size="12" type="text">
-							<span class="newAC">&nbsp;PW&nbsp;</span><input name="PW" size="15" type="password"><br>
+						<form method= "POST" id="replyForm" name="replyForm" action='reply_input.php?page=<?=$page?>&num=<?=$num?>'>
+							<span class="newAC">ID&nbsp;</span><input name="id" size="12" type="text">
+							<span class="newAC">&nbsp;PW&nbsp;</span><input name="pw" size="15" type="password"><br>
 							<textarea name="content" cols="75" rows="6"></textarea><br>
 							<button type="button" onclick="check_input()">댓글달기</button>
 						</form>
@@ -156,7 +156,8 @@
 					<li><button
 							onclick="location.href='board_modify_form.php?num=<?= $num ?>&page=<?= $page ?>'">수정</button>
 					</li>
-					<li><button onclick="location.href='board_delete.php?num=<?= $num ?>&page=<?= $page ?>'">삭제</button>
+					<li>
+						<button onclick="location.href='board_delete.php?num=<?= $num ?>&page=<?= $page ?>'">삭제</button>
 					</li>
 					<li><button onclick="location.href='board_form.php'">글쓰기</button></li>
 				</ul>

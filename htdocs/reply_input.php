@@ -1,19 +1,45 @@
 <?php
-$id = $_POST["ID"];
-$password = $_POST["PW"];
+$id = $_POST["id"];
+$pass = $_POST["pw"];
 $content = $_POST["content"];
 $regist_day = date("Y-m-d (H:i)");
 
+$num = $_GET["num"];
+$page = $_GET["page"];
+$goto = "board_view.php?num={$num}&page={$page}";
+
+echo $id;
+echo " ,";
+echo $pass;
+echo " ,";
+echo $content;
+echo " ,";
+echo $regist_day;
+echo " ,";
+echo $num;
+echo " ,";
+echo $page;
+
 $con = mysqli_connect("localhost", "user1", "12345", "sample");
-$sql_select = "select id from members where id=$id";
-$id = mysqli_query($con, $sql);
-// 아이디찾았는지 if문 확인
-// 아니면 탈출
-// 비번맞는지 확인하는 sql
-// if문으로 확인
-// 아니면 탈출
+$sql_select = "select * from members where id='$id' and pass='$pass'";
+$result = mysqli_query($con, $sql_select);
+$isUser = mysqli_num_rows($result);
 
-//다 통과하면 insert
-//원래 글로 고
-
+echo "<br> $isUser 개";
+if($isUser == 0) {
+    echo("
+    <script>
+    window.alert('등록되지 않은 아이디, 혹은 비밀번호가 틀렸습니다.');
+          history.go(-1);
+    </script>");
+}
+else{
+    $sql_input = "insert into reply (idx, con_num, name, pw, content, date)";
+    $sql_input .= "values('null', '$num', '$id', '$pass', '$content', '$regist_day')";
+    mysqli_query($con, $sql_input);
+    mysqli_close($con);
+    echo("<script>
+        location.replace('{$goto}');
+    </script>");
+}
 ?>
