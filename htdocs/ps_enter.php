@@ -24,7 +24,7 @@
                     <h4><a href="https://www.acmicpc.net/">백준 온라인 저지</a></h4>
                     <p>
                         한국 사이트, 대기업/프로그래밍 대회 기출문제 다수 포함, 간편한 접근성, 그룹/문제집 기능<br>
-                        <a href="https://www.acmicpc.net/group/5170">씨앗 그룹 가입 신청</a>
+                        <a href="https://www.acmicpc.net/group/5170"> >> 씨앗 그룹 가입 신청 << </a>
                     </p>
                 </div>
                 <div id="COF" class="site">
