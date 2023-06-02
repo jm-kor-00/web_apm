@@ -16,6 +16,16 @@
 		<header>
 			<?php include "header.php"; ?>
 		</header>
+		<?php
+		if (!$userid) {
+			echo ("<script>
+				alert('로그인 후 이용해주세요!');
+				history.go(-1);
+				</script>
+			");
+			exit;
+		}
+		?>
 		<section>
 			<div id="main_img_bar">
 				<img src="./img/main_img.png">

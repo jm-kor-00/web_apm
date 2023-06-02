@@ -1,0 +1,27 @@
+#sites{
+    width:1000px;
+    height:700px;
+    margin : 20px auto;
+    border:1px solid #000;
+    box-sizing: border-box;
+}
+#sites h3{
+    margin-top : 10px;
+    text-align: center;
+    font-size : 50px;
+}
+#sites h4{
+    text-align: center;
+    margin : 5px;
+}
+.site{
+    width:800px;
+    height:150px;
+    margin: 30px auto;
+    border : 1px solid #000;
+    box-sizing: border-box;
+}
+.site p{
+    font-size:30px;
+    text-align: center;
+}

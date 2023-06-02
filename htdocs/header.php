@@ -61,6 +61,6 @@ else
         <li class="menu_opt"><a href="message_form.php">쪽지</a></li>
         <li class="menu_opt"><a href="board_list.php">게시판</a></li>
         <li class="menu_opt"><a href="board_form.php">질문하기</a></li>
-        <li class="menu_opt"><a href="https://judge.koreatech.ac.kr/problemset.php" target='_blank'>문제 풀러가기</a></li>
+        <li class="menu_opt"><a href="ps_enter.php" target='_blank'>문제 풀러가기</a></li>
     </ul>
 </div>
