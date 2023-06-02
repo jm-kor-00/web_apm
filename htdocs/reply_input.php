@@ -8,17 +8,17 @@ $num = $_GET["num"];
 $page = $_GET["page"];
 $goto = "board_view.php?num={$num}&page={$page}";
 
-echo $id;
-echo " ,";
-echo $pass;
-echo " ,";
-echo $content;
-echo " ,";
-echo $regist_day;
-echo " ,";
-echo $num;
-echo " ,";
-echo $page;
+// echo $id;
+// echo " ,";
+// echo $pass;
+// echo " ,";
+// echo $content;
+// echo " ,";
+// echo $regist_day;
+// echo " ,";
+// echo $num;
+// echo " ,";
+// echo $page;
 
 $con = mysqli_connect("localhost", "user1", "12345", "sample");
 $sql_select = "select * from members where id='$id' and pass='$pass'";
