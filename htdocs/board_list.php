@@ -112,7 +112,7 @@
 					<?php
 					if ($total_page >= 2 && $page >= 2) {
 						$new_page = $page - 1;
-						echo "<li><a href='board_list.php?page=$new_page'>◀ 이전</a> </li>";
+						echo "<li><a href='board_list.php?page=$new_page' style='font-size:30px;'>◀ 이전</a> </li>";
 					} else
 						echo "<li>&nbsp;</li>";
 
@@ -120,14 +120,14 @@
 					for ($i = 1; $i <= $total_page; $i++) {
 						if ($page == $i) // 현재 페이지 번호 링크 안함
 						{
-							echo "<li><b> $i </b></li>";
+							echo "<li><b style='font-size:30px;'> $i </b></li>";
 						} else {
-							echo "<li><a href='board_list.php?page=$i'> $i </a><li>";
+							echo "<li><a href='board_list.php?page=$i' style='font-size:30px;'> $i </a><li>";
 						}
 					}
 					if ($total_page >= 2 && $page != $total_page) {
 						$new_page = $page + 1;
-						echo "<li> <a href='board_list.php?page=$new_page'>다음 ▶</a> </li>";
+						echo "<li> <a href='board_list.php?page=$new_page' style='font-size:30px;'>다음 ▶</a> </li>";
 					} else
 						echo "<li>&nbsp;</li>";
 					?>
